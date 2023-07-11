@@ -1,0 +1,70 @@
+.section-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    transition: .25s;
+    padding: 1rem 2rem;
+}
+
+.section-content.open,
+.section-content:hover {
+    background-color: #55569E;
+    border-color: #55569E;
+}
+
+.section-content .content {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+
+    margin: 0;
+    padding: 0;
+}
+
+.section-content.open .content {
+    display: inline-block;
+    height: auto;
+    opacity: 1;
+
+    padding-top: 1rem;
+}
+
+.triggler {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.triggler:hover {
+    cursor: pointer;
+}
+
+.triggler::after {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    background-image: url('../img/arrow-down.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.section-content.open .triggler::after {
+    transform: rotate(180deg);
+}
+
+/* ######## SKILLS ######## */

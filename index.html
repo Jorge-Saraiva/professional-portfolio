@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- NORMALIZE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/icons/style.css">
+
+    <title>Portfólio Jorge Saraiva</title>
+</head>
+<body>
+
+    <header class="header">
+        <picture class="photo">
+            <!-- <source class="photo" srcset="./assets/img/perfil.jpg" media="(min-width: 768px)"> -->
+            <img class="photo" id="profile-photo" src="./assets/img/perfil.jpg" alt="Foto de Perfil">
+        </picture>
+        <h1 class="title">Olá, sou <br><span id="profile-name">Carregando...</span></h1>
+
+        <section class="information">
+            <p class="job" id="profile-job">Carregando...</p>
+            <p class="location" id="profile-location">Carregando...</p>
+            <p class="phone">
+                <a href="" id="profile-phone">Carregando</a>
+            </p>
+            <p class="email">
+                <a href="mailto:jorgelsaraiva.work@gmail.com" id="profile-email">Carregando</a>
+            </p>
+        </section>
+    </header>
+
+    <main class="container">
+        <section class="section-content">
+            <button type="button" class="triggler">Skills</button>
+            <section class="content">
+                <section class="skills">
+                    <section class="hard-skills-content">
+                        <h3>Hard Skills</h3>
+                        <ul id="profile-hard-skills">
+                            <!-- Hard Skills -->
+                        </ul>
+                    </section>
+                    <section class="soft-skills-content">
+                        <h3>Soft Skills</h3>
+                        <ul id="profile-soft-skills">
+                            <li>Carregando</li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="section-content">
+            <button type="button" class="triggler">Idiomas</button>
+            <section class="content">
+                <ul class="languages">
+                    <!-- Personal Languages -->
+                </ul>
+            </section>
+        </section>
+        <section class="section-content">
+            <button type="button" class="triggler">Portfólio</button>
+            <section class="content">
+                <ul class="portfolio">
+                    <!-- Personal Repositories -->
+                </ul>
+            </section>
+        </section>
+        <section class="section-content open">
+            <button type="button" class="triggler">Experiência Profissional</button>
+            <section class="content">
+                <ul class="experience">
+                    <!-- Personal Job Experience -->
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <script charset="UTF-8" src="./assets/js/section-content.js"></script>
+    <script charset="UTF-8" src="./assets/js/api.js"></script>
+    <script charset="UTF-8" src="./assets/js/main.js"></script>
+
+</body>
+</html>

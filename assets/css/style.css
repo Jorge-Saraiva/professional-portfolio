@@ -1,0 +1,160 @@
+@import url('./global.css');
+@import url('./sections.css');
+@import url('./skills.css');
+@import url('./languages.css');
+@import url('./portfolio.css');
+@import url('./job-experience.css');
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.header .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.header .title {
+    text-align: center;
+    font-family: 'Neue Machina';
+}
+
+.header h1,
+#profile-name {
+    font-size: 2rem;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+    width: auto;
+}
+
+.information p {
+    margin: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+.information p::before {
+    content: '';
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 1rem;
+}
+
+.information .job::before  {
+    background-image: url('../img/job.svg');
+}
+
+.information .location::before  {
+    background-image: url('../img/location.svg');
+}
+
+.information .phone::before  {
+    background-image: url('../img/phone.svg');
+}
+
+.information .email::before  {
+    background-image: url('../img/email.svg');
+}
+
+footer {
+    width: 100vw;
+
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 470px) {
+
+    .section-content.open .content .languages {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+        row-gap: 1rem;
+    }
+
+    .hard-skills-content ul {
+        gap: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 675px) {
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-items: center;
+        padding: 0;
+        column-gap: 2rem;
+    }
+
+    .hard-skills-content ul {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+    }
+
+}
+
+@media screen and (min-width: 590px) and (max-width: 767px) {
+    .section-content.open .content .languages {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        row-gap: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 800px;
+        margin: 1rem auto;
+    }
+
+    .header {
+        display: grid;
+        grid-template-areas:
+        "photo title"
+        "photo information";
+        justify-content: space-evenly;
+        max-width: 100%;
+    }
+
+    .header .photo {
+        grid-area: photo;
+        width: 250px;
+        height: 250px;
+    }
+
+    .header .title {
+        grid-area: title;
+    }
+
+    .header .information {
+        grid-area: information;
+    }
+
+    .header::before,
+    .header::after {
+        width: 70vw;
+        height: 100vh;
+    }
+
+    .section-content.open .content .languages {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        row-gap: 1rem;
+    }
+
+
+}
